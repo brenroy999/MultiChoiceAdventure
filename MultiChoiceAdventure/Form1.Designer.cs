@@ -30,8 +30,6 @@
         {
             this.outputLabel = new System.Windows.Forms.Label();
             this.blueText = new System.Windows.Forms.Label();
-            this.blueButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.redText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -55,24 +53,6 @@
             this.blueText.TabIndex = 1;
             this.blueText.Text = "Blue Output";
             // 
-            // blueButton
-            // 
-            this.blueButton.Location = new System.Drawing.Point(17, 357);
-            this.blueButton.Name = "blueButton";
-            this.blueButton.Size = new System.Drawing.Size(40, 30);
-            this.blueButton.TabIndex = 2;
-            this.blueButton.Text = "Blue";
-            this.blueButton.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(17, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Red";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // redText
             // 
             this.redText.AutoSize = true;
@@ -88,9 +68,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 399);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.redText);
-            this.Controls.Add(this.blueButton);
             this.Controls.Add(this.blueText);
             this.Controls.Add(this.outputLabel);
             this.Name = "Form1";
@@ -105,8 +83,6 @@
 
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Label blueText;
-        private System.Windows.Forms.Button blueButton;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label redText;
     }
 }
