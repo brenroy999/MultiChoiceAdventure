@@ -13,7 +13,7 @@ namespace MultiChoiceAdventure
     public partial class Form1 : Form
     {
         int scene = 0;
-        int keyPresent = 0;
+        bool keyPresent = false;
         Random randGen = new Random();
         public Form1()
         {
@@ -35,37 +35,42 @@ namespace MultiChoiceAdventure
                 if (scene == 0)
                 {
                     scene = 1;
-                    outputLabel.Text = "";
-                    redText.Text = "";
+                    outputLabel.Text = "You run out through the door, looking both ways down the hall," + 
+                        "\nstill seeing no one around.";
+                    redText.Text = "Continue";
                     blueText.Text = "";
                 }
                 else if (scene == 1 | scene == 4)
                 {
                     scene = 5;
-                    outputLabel.Text = "";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    outputLabel.Text = "You continue down the hall, and exit the building. " +
+                        "\nThe door leaves you in a random field, and the door is gone when you turn around to look.";
+                    redText.Text = "Continue traveling straight forward";
+                    blueText.Text = "Observe surrounding area";
                 }
                 else if (scene == 2)
                 {
                     scene = 4;
-                    outputLabel.Text = "";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    outputLabel.Text = "The vent comes off easiky, and you enter the ventilation system.";
+                    redText.Text = "Exit into hallway.";
+                    blueText.Text = "Continue through vents.";
                 }
                 else if (scene == 5)
                 {
                     scene = 6;
-                    outputLabel.Text = "";
+                    outputLabel.Text = "You trip on some sort of root, and close your eyes. " +
+                        "\nWhen it feels you’re about to hit the ground, you notice the sensation of high gusts of wind. " +
+                        "\nYou’re now on a snowy mountain. Somehow";
                     redText.Text = "";
                     blueText.Text = "";
                 }
                 else if (scene == 6)
                 {
                     scene = 8;
-                    outputLabel.Text = "";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    outputLabel.Text = "You enter a nearby structure to escape the cold, and come across an armory, " +
+                        "\nwith a locked door on the one side.";
+                    redText.Text = "Browse Equipment";
+                    blueText.Text = "Attempt to unlock door";
                 }
                 else if (scene == 8)
                 {
@@ -73,6 +78,14 @@ namespace MultiChoiceAdventure
                     outputLabel.Text = "";
                     redText.Text = "";
                     blueText.Text = "";
+                }
+                else if (scene ==9)
+                {
+                    scene = 7;
+                    outputLabel.Text = "";
+                    redText.Text = "Continue";
+                    blueText.Text = "";
+
                 }
                 else if (scene == 10)
                 {
@@ -137,7 +150,10 @@ namespace MultiChoiceAdventure
                 else if (scene == 3)
                 {
                     scene = 1;
-                    keyPresent = 1;
+                    outputLabel.Text = "Obtained key.";
+                    redText.Text = "Continue";
+                    blueText.Text = "";
+                    keyPresent = true;
                 }
                 else if (scene == 5|scene == 9|scene == 23)
                 {
@@ -145,7 +161,18 @@ namespace MultiChoiceAdventure
                 }
                 else if (scene == 8)
                 {
-                    scene = 9;
+                    if (keyPresent == true)
+                    {
+                        scene = 9;
+                        outputLabel.Text = "The door opens, and you're blinded by a bright light. ";
+                        redText.Text = "Continue";
+                        blueText.Text = "";
+                    }
+                    else
+                    {
+                        scene = 10;
+                        outputLabel.Text = "";
+                    }
                 }
                 else if (scene == 10)
                 {
@@ -153,7 +180,7 @@ namespace MultiChoiceAdventure
                 }
                 else if (scene == 13)
                 {
-                    scene = 14;
+                    scene = 14; ;
                 }
                 else if (scene == 14)
                 {
