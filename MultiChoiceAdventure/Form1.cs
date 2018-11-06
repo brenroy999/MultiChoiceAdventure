@@ -61,7 +61,7 @@ namespace MultiChoiceAdventure
                     outputLabel.Text = "You trip on some sort of root, and close your eyes. " +
                         "\nWhen it feels you’re about to hit the ground, you notice the sensation of high gusts of wind. " +
                         "\nYou’re now on a snowy mountain. Somehow";
-                    redText.Text = "";
+                    redText.Text = "Continue";
                     blueText.Text = "";
                 }
                 else if (scene == 6)
@@ -75,7 +75,9 @@ namespace MultiChoiceAdventure
                 else if (scene == 8)
                 {
                     scene = 10;
-                    outputLabel.Text = "";
+                    outputLabel.Text = "You assume you’ll probably need some level of protection, " +
+                        "\nso you equip a basic set of armor from the wall, and grab an odd looking sword" +
+                        "\n from the wall with a trigger.";
                     redText.Text = "";
                     blueText.Text = "";
                 }
