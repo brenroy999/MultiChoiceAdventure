@@ -38,7 +38,7 @@ namespace MultiChoiceAdventure
                     outputLabel.Text = "You run out through the door, looking both ways down the hall," + 
                         "\nstill seeing no one around.";
                     redText.Text = "Continue";
-                    blueText.Text = "";
+                    blueText.Text = "N/A";
                 }
                 else if (scene == 1 | scene == 4)
                 {
@@ -50,10 +50,11 @@ namespace MultiChoiceAdventure
                 }
                 else if (scene == 2)
                 {
-                    scene = 4;
-                    outputLabel.Text = "The vent comes off easiky, and you enter the ventilation system.";
-                    redText.Text = "Exit into hallway.";
-                    blueText.Text = "Continue through vents.";
+                    scene = 0;
+                    outputLabel.Text = "Obtained key.";
+                    redText.Text = "Continue";
+                    blueText.Text = "N/A";
+                    keyPresent = true;
                 }
                 else if (scene == 5)
                 {
@@ -62,7 +63,7 @@ namespace MultiChoiceAdventure
                         "\nWhen it feels you’re about to hit the ground, you notice the sensation of high gusts of wind. " +
                         "\nYou’re now on a snowy mountain. Somehow";
                     redText.Text = "Continue";
-                    blueText.Text = "";
+                    blueText.Text = "N/A";
                 }
                 else if (scene == 6)
                 {
@@ -72,16 +73,24 @@ namespace MultiChoiceAdventure
                     redText.Text = "Browse Equipment";
                     blueText.Text = "Attempt to unlock door";
                 }
+                else if (scene == 7)
+                {
+                    scene = 99;
+                    outputLabel.Text = "You blink, and you’re fully awake in the classroom. You’re sitting straight up, and looking at the board. " +
+                        "\nYou continue your day, forgetting your daydream.";
+                    redText.Text = "Continue";
+                    blueText.Text = "N/A";
+                }
                 else if (scene == 8)
                 {
                     scene = 10;
                     outputLabel.Text = "You assume you’ll probably need some level of protection, " +
                         "\nso you equip a basic set of armor from the wall, and grab an odd looking sword" +
                         "\n from the wall with a trigger.";
-                    redText.Text = "";
+                    redText.Text = "Continue";
                     blueText.Text = "";
                 }
-                else if (scene ==9)
+                else if (scene == 9)
                 {
                     scene = 7;
                     outputLabel.Text = "";
@@ -131,9 +140,9 @@ namespace MultiChoiceAdventure
                     redText.Text = "";
                     blueText.Text = "";
                 }
-                else if (scene == 7|scene == 18 | scene == 19 | scene == 20 | scene == 21|scene ==24)
+                else if (scene == 99)
                 {
-                    scene = 22;
+                    
                     outputLabel.Text = "Restart?";
                     redText.Text = "Yes.";
                     blueText.Text = "No.";
@@ -144,18 +153,24 @@ namespace MultiChoiceAdventure
                 if (scene == 0)
                 {
                     scene = 2;
+                    outputLabel.Text = "You walk up and down between the rows of desks, looking for some kind of clue. " +
+                        "\nYou hear the click of the room’s door lock.";
+                    redText.Text = "Investigate more, then attempt to bust door open.";
+                    blueText.Text = "Enter ventilation system.";
                 }
                 else if (scene == 2)
                 {
-                    scene = 3;
+                    scene = 4;
+                    outputLabel.Text = "The vent comes off easiky, and you enter the ventilation system.";
+                    redText.Text = "Exit into hallway.";
+                    blueText.Text = "Continue through vents.";
                 }
-                else if (scene == 3)
+                else if (scene == 4)
                 {
-                    scene = 1;
-                    outputLabel.Text = "Obtained key.";
-                    redText.Text = "Continue";
+                    scene = 7;
+                    outputLabel.Text = "You keep travelling down the shaft, and it gets darker and darker.";
+                    redText.Text = "Continue.";
                     blueText.Text = "";
-                    keyPresent = true;
                 }
                 else if (scene == 5|scene == 9|scene == 23)
                 {
@@ -207,9 +222,9 @@ namespace MultiChoiceAdventure
                 {
                     scene = 19;
                 }
-                else if (scene == 7|scene == 18 | scene == 19 | scene == 20 | scene == 21|scene == 24)
+                else if (scene == 98)
                 {
-                    scene = 22;
+                    scene = 99;
                     outputLabel.Text = "Restart?";
                     redText.Text = "Yes.";
                     blueText.Text = "No.";
@@ -222,6 +237,11 @@ namespace MultiChoiceAdventure
                     scene = 24;
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

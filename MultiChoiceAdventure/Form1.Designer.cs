@@ -31,6 +31,10 @@
             this.outputLabel = new System.Windows.Forms.Label();
             this.blueText = new System.Windows.Forms.Label();
             this.redText = new System.Windows.Forms.Label();
+            this.labelM = new System.Windows.Forms.Label();
+            this.labelB = new System.Windows.Forms.Label();
+            this.labelN = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // outputLabel
@@ -63,11 +67,63 @@
             this.redText.TabIndex = 3;
             this.redText.Text = "Red Output";
             // 
+            // labelM
+            // 
+            this.labelM.AutoSize = true;
+            this.labelM.BackColor = System.Drawing.Color.Red;
+            this.labelM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelM.Location = new System.Drawing.Point(35, 330);
+            this.labelM.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
+            this.labelM.Name = "labelM";
+            this.labelM.Size = new System.Drawing.Size(16, 13);
+            this.labelM.TabIndex = 4;
+            this.labelM.Text = "M";
+            this.labelM.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // labelB
+            // 
+            this.labelB.AutoSize = true;
+            this.labelB.BackColor = System.Drawing.Color.Blue;
+            this.labelB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelB.Location = new System.Drawing.Point(35, 366);
+            this.labelB.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
+            this.labelB.Name = "labelB";
+            this.labelB.Size = new System.Drawing.Size(14, 13);
+            this.labelB.TabIndex = 5;
+            this.labelB.Text = "B";
+            // 
+            // labelN
+            // 
+            this.labelN.AutoSize = true;
+            this.labelN.BackColor = System.Drawing.Color.Yellow;
+            this.labelN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelN.Location = new System.Drawing.Point(35, 293);
+            this.labelN.Margin = new System.Windows.Forms.Padding(9, 3, 9, 3);
+            this.labelN.Name = "labelN";
+            this.labelN.Size = new System.Drawing.Size(15, 13);
+            this.labelN.TabIndex = 7;
+            this.labelN.Text = "N";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(63, 290);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Yellow Output";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 399);
+            this.Controls.Add(this.labelN);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelB);
+            this.Controls.Add(this.labelM);
             this.Controls.Add(this.redText);
             this.Controls.Add(this.blueText);
             this.Controls.Add(this.outputLabel);
@@ -84,6 +140,10 @@
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Label blueText;
         private System.Windows.Forms.Label redText;
+        private System.Windows.Forms.Label labelM;
+        private System.Windows.Forms.Label labelB;
+        private System.Windows.Forms.Label labelN;
+        private System.Windows.Forms.Label label2;
     }
 }
 
