@@ -78,7 +78,6 @@
             this.labelM.Size = new System.Drawing.Size(16, 13);
             this.labelM.TabIndex = 4;
             this.labelM.Text = "M";
-            this.labelM.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelB
             // 

@@ -88,12 +88,12 @@ namespace MultiChoiceAdventure
                         "\nso you equip a basic set of armor from the wall, and grab an odd looking sword" +
                         "\n from the wall with a trigger.";
                     redText.Text = "Continue";
-                    blueText.Text = "";
+                    blueText.Text = "N/A";
                 }
                 else if (scene == 9)
                 {
                     scene = 7;
-                    outputLabel.Text = "";
+                    outputLabel.Text = "You're blinded by a bright light, coming through the door.";
                     redText.Text = "Continue";
                     blueText.Text = "";
 
@@ -101,14 +101,14 @@ namespace MultiChoiceAdventure
                 else if (scene == 10)
                 {
                     scene = 11;
-                    outputLabel.Text = "";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    outputLabel.Text = "You get an odd feeling, and look behind you.";
+                    redText.Text = "Continue.";
+                    blueText.Text = "N/A";
                 }
                 else if (scene == 11)
                 {
                     scene = 12;
-                    outputLabel.Text = "";
+                    outputLabel.Text = "A figure approaches, and takes a stance a distance away.";
                     redText.Text = "";
                     blueText.Text = "";
                 }
@@ -181,7 +181,7 @@ namespace MultiChoiceAdventure
                     if (keyPresent == true)
                     {
                         scene = 9;
-                        outputLabel.Text = "The door opens, and you're blinded by a bright light. ";
+                        outputLabel.Text = "The key opens the door.";
                         redText.Text = "Continue";
                         blueText.Text = "";
                     }
@@ -194,33 +194,48 @@ namespace MultiChoiceAdventure
                 else if (scene == 10)
                 {
                     scene = 13;
+                    outputLabel.Text = "You step into what seems to be a practice floor in a facility.";
+                    redText.Text = "";
+                    blueText.Text = "";
                 }
                 else if (scene == 13)
                 {
-                    scene = 14; ;
+                    scene = 14;
+                    redText.Text = "";
+                    blueText.Text = "";
                 }
                 else if (scene == 14)
                 {
                     if (randNum < 7)
                     {
                         scene = 22;
+                        redText.Text = "";
+                        blueText.Text = "";
                     }
                     else
                     {
                         scene = 23;
+                        redText.Text = "";
+                        blueText.Text = "";
                     }
                 }
                 else if (scene == 15)
                 {
                     scene = 17;
+                    redText.Text = "";
+                    blueText.Text = "";
                 }
                 else if (scene == 17)
                 {
                     scene = 21;
+                    redText.Text = "";
+                    blueText.Text = "";
                 }
                 else if (scene == 16)
                 {
                     scene = 19;
+                    redText.Text = "";
+                    blueText.Text = "";
                 }
                 else if (scene == 98)
                 {
@@ -235,13 +250,10 @@ namespace MultiChoiceAdventure
                 if (scene == 2)
                 {
                     scene = 24;
+                    redText.Text = "";
+                    blueText.Text = "";
                 }
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
