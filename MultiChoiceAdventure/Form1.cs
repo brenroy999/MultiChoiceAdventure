@@ -23,8 +23,10 @@ namespace MultiChoiceAdventure
 
             outputLabel.Text = "You begin daydreaming in class, and wake up to a sudden snap of a ruler on your desk. " +
                 "\nYou open your eyes, and everyone is missing, with no trace.";
-           blueText.Text="Investigate room.";
-            redText.Text="Leave Immediately.";
+           blueText.Text=  "Investigate room.";
+           redText.Text=   "Leave Immediately.";
+           yellowText.Text="N/A";
+            labelDebug.Text = "" + (scene);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -109,29 +111,29 @@ namespace MultiChoiceAdventure
                 {
                     scene = 12;
                     outputLabel.Text = "A figure approaches, and takes a stance a distance away.";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    redText.Text = "First Strike.";
+                    blueText.Text = "Defend.";
                 }
                 else if (scene == 12)
                 {
                     scene = 15;
-                    outputLabel.Text = "";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    outputLabel.Text = "You successfully land a first hit on the figure, and it retreats to a safe distance.";
+                    redText.Text = "Second hit.";
+                    blueText.Text = "Retreat.";
                 }
                 else if (scene == 15)
                 {
                     scene = 16;
-                    outputLabel.Text = "";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    outputLabel.Text = "You land a successful second hit, and the figure drops to the ground.";
+                    redText.Text = "Finisher.";
+                    blueText.Text = "Enter nearby cave.";
                 }
                 else if (scene == 16)
                 {
                     scene = 18;
-                    outputLabel.Text = "";
-                    redText.Text = "";
-                    blueText.Text = "";
+                    outputLabel.Text = "You retreat into the cave, and find a place to relax.";
+                    redText.Text = "Meditate";
+                    blueText.Text = "Sleep";
                 }
                 else if (scene == 17)
                 {
@@ -140,9 +142,43 @@ namespace MultiChoiceAdventure
                     redText.Text = "";
                     blueText.Text = "";
                 }
+                else if (scene == 18)
+                {
+                    scene = 99;
+                    outputLabel.Text = "You wake up in bed, as it was all a dream.";
+                    redText.Text = "Continue.";
+                    blueText.Text = "N/A";
+                }
+                else if (scene == 20)
+                {
+                    scene = 99;
+                    outputLabel.Text = "";
+                    redText.Text = "";
+                    blueText.Text = ""; 
+                }
+                else if (scene == 21)
+                {
+                    scene = 99;
+                    outputLabel.Text = "";
+                    redText.Text = "";
+                    blueText.Text = "";
+                }
+                else if (scene == 22)
+                {
+                    scene = 99;
+                    outputLabel.Text = "";
+                    redText.Text = "";
+                    blueText.Text = "";
+                }
+                else if (scene == 23)
+                {
+                    scene = 99;
+                    outputLabel.Text = "";
+                    redText.Text = "";
+                    blueText.Text = "";
+                }
                 else if (scene == 99)
                 {
-                    
                     outputLabel.Text = "Restart?";
                     redText.Text = "Yes.";
                     blueText.Text = "No.";
@@ -155,6 +191,7 @@ namespace MultiChoiceAdventure
                     scene = 2;
                     outputLabel.Text = "You walk up and down between the rows of desks, looking for some kind of clue. " +
                         "\nYou hear the click of the room’s door lock.";
+                    yellowText.Text = "Go back to sleep.";
                     redText.Text = "Investigate more, then attempt to bust door open.";
                     blueText.Text = "Enter ventilation system.";
                 }
@@ -201,6 +238,7 @@ namespace MultiChoiceAdventure
                 else if (scene == 13)
                 {
                     scene = 14;
+                    outputLabel.Text = "";
                     redText.Text = "";
                     blueText.Text = "";
                 }
@@ -209,8 +247,10 @@ namespace MultiChoiceAdventure
                     if (randNum < 7)
                     {
                         scene = 22;
+                        outputLabel.Text = "";
                         redText.Text = "";
                         blueText.Text = "";
+
                     }
                     else
                     {
@@ -237,7 +277,7 @@ namespace MultiChoiceAdventure
                     redText.Text = "";
                     blueText.Text = "";
                 }
-                else if (scene == 98)
+                else if (scene == 99)
                 {
                     scene = 99;
                     outputLabel.Text = "Restart?";
@@ -249,11 +289,15 @@ namespace MultiChoiceAdventure
             {
                 if (scene == 2)
                 {
-                    scene = 24;
-                    redText.Text = "";
-                    blueText.Text = "";
+                    scene = 7;
+                    outputLabel.Text = "You go back to sleep, deciding not to explore.l";
+                    yellowText.Text = "N/A";
+                    redText.Text = "Continue";
+                    blueText.Text = "N/A";
                 }
             }
+            labelDebug.Text = "" + (scene);
+            Refresh();
         }
     }
 }

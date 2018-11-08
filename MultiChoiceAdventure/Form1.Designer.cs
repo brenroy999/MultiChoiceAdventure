@@ -34,7 +34,8 @@
             this.labelM = new System.Windows.Forms.Label();
             this.labelB = new System.Windows.Forms.Label();
             this.labelN = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.yellowText = new System.Windows.Forms.Label();
+            this.labelDebug = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // outputLabel
@@ -104,23 +105,33 @@
             this.labelN.TabIndex = 7;
             this.labelN.Text = "N";
             // 
-            // label2
+            // yellowText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 290);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Yellow Output";
+            this.yellowText.AutoSize = true;
+            this.yellowText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowText.Location = new System.Drawing.Point(63, 290);
+            this.yellowText.Name = "yellowText";
+            this.yellowText.Size = new System.Drawing.Size(95, 17);
+            this.yellowText.TabIndex = 6;
+            this.yellowText.Text = "Yellow Output";
+            // 
+            // labelDebug
+            // 
+            this.labelDebug.AutoSize = true;
+            this.labelDebug.Location = new System.Drawing.Point(565, 294);
+            this.labelDebug.Name = "labelDebug";
+            this.labelDebug.Size = new System.Drawing.Size(66, 13);
+            this.labelDebug.TabIndex = 8;
+            this.labelDebug.Text = "DEBUG BOI";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 399);
+            this.Controls.Add(this.labelDebug);
             this.Controls.Add(this.labelN);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.yellowText);
             this.Controls.Add(this.labelB);
             this.Controls.Add(this.labelM);
             this.Controls.Add(this.redText);
@@ -142,7 +153,8 @@
         private System.Windows.Forms.Label labelM;
         private System.Windows.Forms.Label labelB;
         private System.Windows.Forms.Label labelN;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label yellowText;
+        private System.Windows.Forms.Label labelDebug;
     }
 }
 
